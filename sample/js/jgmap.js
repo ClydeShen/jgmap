@@ -9,9 +9,9 @@ $(document).ready(function(){
         shadow: "shadow"
       },
       infowindow_options: {
-        disableAutoPan: true
+        disableAutoPan: false
       },
-      autofit: true,
+      autofit: false,
       icon:{
         src: "http://maps.google.com/mapfiles/ms/micons/purple.png",
         shadow: "http://maps.google.com/mapfiles/ms/micons/pushpin_shadow.png"
@@ -57,8 +57,8 @@ $(document).ready(function(){
 
     initial:{
       draggable: true,
-      zoom: 5,
-      center: [58, 35],
+      zoom: 14,
+      center: [59.92932701990811, 30.35871306674805],
       mapTypeControl : true,
       scaleControl: true,
       min_zoom: 20
