@@ -38,7 +38,8 @@
                                                                new google.maps.LatLng(options.geocoder.bounds.ne[0], options.geocoder.bounds.ne[1])
         );
       }
-      options.geocoder.clarification = (options.geocoder.clarification && $(options.geocoder.clarification).html()) ?  $(options.geocoder.clarification).html() : options.geocoder.clarification;
+      var clarification = "#" + options.geocoder.clarification;
+      options.geocoder.clarification = (options.geocoder.clarification && $(clarification).html()) ?  $(clarification).html() : options.geocoder.clarification;
       
       if (options.show_points) {
         var lat = $('[name^="' + options.show_points.lat + '["]');
