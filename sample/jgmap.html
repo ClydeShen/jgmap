@@ -1,0 +1,88 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="css/jgmap.css" />
+    <script src="http://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true&hl=ru"></script>
+    <script type="text/javascript" src="js/gmaps.markermanager.js"></script>
+    <script type="text/javascript" src="js/jquery.gmap.pack.js"></script>
+    <script type="text/javascript" src="js/jgmap.js"></script>
+  </head>
+  
+  <body>
+  <label for="search_id">Ищем локацию:</label>
+  <input type="text" id="search_id" />
+    <div id="search-map" class="jquery-geocoder-map"></div>
+    <div class="geocoging-results">
+      <input type="text" id="lat" />
+      <input type="text" id="lng" />
+      <input type="text" id="accuracy" />
+    </div>
+
+    <div>
+      <p>
+        Нечто, отображаемое на карте
+      </p>
+      <input type="hidden" value="59.8866254" name="lat[0]"/>
+      <input type="hidden" value="29.5" name="lng[0]"/>
+      <input type="hidden" value="Нечто, отображаемое на карте" name="infowindow[0]"/>
+    </div>
+    
+    <div>
+      <p>
+        Допустим, другое нечто
+      </p>
+      <input type="hidden" value="59.8966254" name="lat[1]"/>
+      <input type="hidden" value="29.55" name="lng[1]"/>
+      <input type="hidden" name="icon[1]" value="http://maps.google.com/mapfiles/ms/micons/caution.png" />
+      <input type="hidden" name="shadow[1]" value="http://maps.google.com/mapfiles/ms/micons/caution.shadow.png" />
+
+      <div name="infowindow[1]" style="display: none;">
+        <div class="infowindow">
+          <a href="#" rel="nofollow" class="favorites disabled">
+            <span title="Авторизуйтесь, чтобы добавить в избранное" class="icon">fav</span>
+          </a>
+          <span class="title">Какой-то заголовок</span> <br>
+          <div class="clear">
+            Описание, а то и адрес подробный <br>
+            <div class="info">
+              <a href="#">линк</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div>
+      <p>
+        Moar
+      </p>
+      <input type="hidden" value="59.8996254" name="lat[2]"/>
+      <input type="hidden" value="29.56" name="lng[2]"/>
+      <input type="hidden" value="Moar" name="infowindow[2]"/>
+    </div>
+    
+    <div>
+      <p>
+        !!!
+      </p>
+      <input type="hidden" value="59.8996654" name="lat[3]"/>
+      <input type="hidden" value="29.565" name="lng[3]"/>
+      <input type="hidden" value="!!!" name="infowindow[3]"/>
+    </div>
+    
+    <div>
+      <p>
+        Profit
+      </p>
+      <input type="hidden" value="59.9299684" name="lat[4]"/>
+      <input type="hidden" value="29.56532" name="lng[4]"/>
+      <input type="hidden" value="Profit" name="infowindow[4]"/>
+    </div>
+    <div>
+      <input type="hidden" value="59.8996684" name="lat"/>
+      <input type="hidden" value="59.8996684" name="lng"/>
+    </div>
+  </body>
+</html>
