@@ -1,4 +1,4 @@
-$(document).ready(function(){
+ $(document).ready(function(){
   $("#search-map").Gmap({
     show_points: {
       lat: "lat",
