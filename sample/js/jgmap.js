@@ -32,7 +32,7 @@ $(document).ready(function(){
     geocoder: {
       clarification: "Petersburg",
       target: "search_id",
-      bounds: {sw: [37, 40], ne: [80, 140]},
+      //bounds: {sw: [37, 40], ne: [80, 140]},
       country: "RU",
       language: "ru",
       success: {
