@@ -189,6 +189,8 @@
             if (this.shadow) {
               marker.setShadow(new google.maps.MarkerImage(this.shadow));
             }
+            
+            marker.setOptions(options.show_points.marker.options);
 
             var self = this;
             if (typeof window.GmapsMarkerManager == "function" && typeof marker_manager != "undefined") marker_manager.addMarker(marker, this.infowindow);
@@ -305,7 +307,8 @@
       infowindow: "infowindow",
       marker: {
         icon: "icon",
-        shadow: "shadow"
+        shadow: "shadow",
+        options: {}
       },
       infowindow_options: {
         disableAutoPan: true
