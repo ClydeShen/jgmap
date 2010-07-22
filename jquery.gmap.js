@@ -113,21 +113,21 @@
         $(this).trigger("geocoder-showPoints");
         
         
-        if (options.dragend) {
+        if (options.show_points.dragend) {
           google.maps.event.addListener(this.map, "dragend", function() {
-            window[options.dragend].call(null, $.fn.Gmap);
+            window[options.show_points.dragend].call(null, $.fn.Gmap);
           });
         }
                 
-        if (options.on_zoom) {
+        if (options.show_points.on_zoom) {
           google.maps.event.addListener(this.map, "zoom_changed", function() {
-              window[options.on_zoom].call(null, $.fn.Gmap);
+              window[options.show_points.on_zoom].call(null, $.fn.Gmap);
           });  
         }
         
-        if (options.bounds_changed) {
+        if (options.show_points.bounds_changed) {
           google.maps.event.addListener(this.map, "bounds_changed", function() {
-            window[options.bounds_changed].call(null, $.fn.Gmap);
+            window[options.show_points.bounds_changed].call(null, $.fn.Gmap);
           });  
         }
         if (options.initial.min_zoom) {
@@ -191,7 +191,13 @@
             }
             
             marker.setOptions(options.show_points.marker.options);
-
+            
+            if (options.show_points.marker.dragend) {
+              google.maps.event.addListener(marker, "dragend", function() {
+                window[options.show_points.marker.dragend].call(null, $.fn.Gmap);
+              });
+            }
+        
             var self = this;
             if (typeof window.GmapsMarkerManager == "function" && typeof marker_manager != "undefined") marker_manager.addMarker(marker, this.infowindow);
             else marker.setMap(map);
@@ -302,13 +308,15 @@
  
   $.fn.Gmap.defaults = {
     show_points: {
+      dragend: null,
       lat: "lat",
       lng: "lng",
       infowindow: "infowindow",
       marker: {
         icon: "icon",
         shadow: "shadow",
-        options: {}
+        options: {},
+        dragend: null
       },
       infowindow_options: {
         disableAutoPan: true

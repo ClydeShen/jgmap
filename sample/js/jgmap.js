@@ -1,12 +1,20 @@
+function asd(){
+  alert("asd");
+}
 $(document).ready(function(){
   $("#search-map").Gmap({
     show_points: {
+      dragend: null,
       lat: "lat",
       lng: "lng",
       infowindow: "infowindow",
       marker: {
         icon: "icon",
-        shadow: "shadow"
+        shadow: "shadow",
+        options: {
+          draggable: false
+        },
+        dragend: null
       },
       infowindow_options: {
         disableAutoPan: false
